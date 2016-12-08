@@ -7,7 +7,7 @@
 ### Installation & Usage
 
  
-<img src="http://i.imgur.com/LazEaOx.png">
+![alt tag](https://raw.github.com/Mobinexbiz/SMFChartPlugins/master/Screenshots/barChart.png)
 
 
 #### Requirements
