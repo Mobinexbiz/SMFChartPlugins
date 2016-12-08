@@ -7,7 +7,7 @@
 ### Installation & Usage
 
  
-![alt tag](https://raw.github.com/Mobinexbiz/SMFChartPlugins/master/Screenshots/barChart.png)
+![alt tag](https://raw.github.com/Mobinexbiz/SMFChartPlugins/master/screenshot/barChart.png)
 
 
 #### Requirements
