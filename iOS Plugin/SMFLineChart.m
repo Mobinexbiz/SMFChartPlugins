@@ -34,8 +34,6 @@
         ((LineChartView *)self.chartView).drawGridBackgroundEnabled = NO;
         ((LineChartView *)self.chartView).highlightPerDragEnabled = YES;
         
-        self.chartView.backgroundColor = UIColor.whiteColor;
-        
         self.chartView.legend.enabled = NO;
         
         ChartXAxis *xAxis = self.chartView.xAxis;
