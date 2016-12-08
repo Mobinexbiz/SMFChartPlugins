@@ -1,0 +1,7 @@
+{
+  "classes": [
+    "io.smartface.chart.SMFBarChart",
+    "io.smartface.chart.SMFPieChart"
+
+  ]
+}

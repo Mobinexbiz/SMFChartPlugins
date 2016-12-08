@@ -1,0 +1,9 @@
+{
+  "name": "linechart",
+  "version": "1.0.0",
+  "description": "Smartface Android plugin of Chart.",
+  "author": "Smartface",
+  "license": "ISC",
+  "os": "Android",
+  "cpu": ["ARM","x86"]
+}
