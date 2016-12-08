@@ -23,7 +23,7 @@ iOS 7+ and Android Api 14+
 
 To start using Chart plugin you need to follow below steps:
 
- - Download plugin file.
+ - Download plugin file in PluginZip folder.
  - Copy plugin file to Smartface plugin folder.
  - Set the Chart plugin in plugin.json.
  
