@@ -8,9 +8,9 @@
 
 #### iOS Screenshots
 
-<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/barChart.png">
-<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/lineChart.png">
-<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/pieChart.png">
+<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/barChart.PNG">
+<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/lineChart.PNG">
+<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/pieChart.PNG">
 
 #### Android Screenshots
 
