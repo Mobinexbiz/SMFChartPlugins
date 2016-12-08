@@ -25,7 +25,7 @@ To start using Chart plugin you need to follow below steps:
 
  - Download plugin file.
  - Copy plugin file to Smartface plugin folder.
- - Select Calendar plugin in Smartface project settings.
+ - Set the Chart plugin in plugin.json.
  
 
 ### USAGE BAR CHART & LINE CHART
