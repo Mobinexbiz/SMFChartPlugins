@@ -6,9 +6,13 @@
 
 ### Installation & Usage
 
- 
-![alt tag](https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/barChart.png)
+#### iOS Screenshots
 
+<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/barChart.png">
+<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/lineChart.png">
+<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/pieChart.png">
+
+#### Android Screenshots
 
 #### Requirements
 iOS 7+ and Android Api 14+
@@ -123,7 +127,7 @@ barChart.setColor("Blue");
 
 #### Set RGB Color  Bar Chart View
 Parameters	:	
-- 1. Parameter : Color RED Value (Must be between0-255)	   "int" 
+- 1. Parameter : Color RED Value (Must be between0-255)	   	 "int" 
 - 2. Parameter : Color GREEN Value (Must be between0-255)	 "int" 
 - 3. Parameter : Color BLUE Value (Must be between0-255) 	 "int" 
 
@@ -302,4 +306,4 @@ pieChart.setRotationEnabled(false);
 Smartface Chart Plugins is licensed under the Apache License, Version 2.0. See the LICENSE file for more info.
 
 ### ChangeLog
-Read the [CHANGELOG.md](https://github.com/SmartfaceIO/plugin-salesforce-android/blob/master/CHANGELOG.md) file.
+Read the [CHANGELOG.md](https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/CHANGELOG.md) file.
