@@ -30,8 +30,6 @@ To start using Chart plugin you need to follow below steps:
 
 ### USAGE BAR CHART & LINE CHART
 
-RESIM -- RESIM--
-
 #### Create New Bar Chart View 
 Parameters	:  
 - 1.Parameter : Paramater must be "Landroid/app/Activity;" 
