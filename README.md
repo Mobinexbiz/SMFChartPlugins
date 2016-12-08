@@ -7,11 +7,10 @@
 ### Installation & Usage
 
  
-* **Summary**: TEST
-* **Screenshots**: 
 <img src="http://i.imgur.com/LazEaOx.png">
 
-* **Requirements**: 
+
+#### Requirements
 iOS 7+ and Android Api 14+
 
 To start using Chart plugin you need to follow below steps:
@@ -170,6 +169,7 @@ barChart.setYAxisFontSize(12);
 ``` Javascript
 page1.add(barChart);
 ```
+
 
 
 
