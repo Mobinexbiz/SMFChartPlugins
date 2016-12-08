@@ -181,8 +181,6 @@ page1.add(barChart);
 
 ### USAGE PIE CHART
 
-RESIM -- RESIM--
-
 #### Create New Pie Chart View 
 Parameters	:  
 - 1.Parameter : Paramater must be "Landroid/app/Activity;" 
