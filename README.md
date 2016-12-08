@@ -14,6 +14,10 @@
 
 #### Android Screenshots
 
+<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/androidBarChart.png">
+<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/androidLineChart.png">
+<img width=250 src="https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/Screenshot/androidPieChart.png">
+
 #### Requirements
 iOS 7+ and Android Api 14+
 
