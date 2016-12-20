@@ -10,10 +10,22 @@
 
 @interface NSString (Chart)
 
+/*!
+ * @discussion NSString
+ * @return all numbers in string
+ */
 -(NSString*)getNumbersFromString;
 
+/*!
+ * @discussion String to UIcolor
+ * @return uicolor
+ */
 -(UIColor*)giveColorfromStringColor;
 
+/*!
+ * @discussion String check only number
+ * @return bool
+ */
 -(BOOL)checkOnlyNumber;
     
 @end

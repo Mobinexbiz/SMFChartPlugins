@@ -10,6 +10,10 @@
 
 @interface NSDictionary (Charts)
 
+/*!
+ * @discussion Change frame dictionary to percent array
+ * @return Frame dictionary
+ */
 -(NSDictionary *)resizeWindowPercent;
 
 @end

@@ -10,6 +10,10 @@
 
 @interface NSArray (Charts)
 
+/*!
+ * @discussion Change string array to color array
+ * @return Color array
+ */
 -(NSArray*)stringArrayToColorArray;
 
 @end
