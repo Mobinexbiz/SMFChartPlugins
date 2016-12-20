@@ -146,7 +146,7 @@ public class SMFLineChart extends RelativeLayout {
         });
 
 
-
+        //Chart gasture listener
         mChart.setOnChartGestureListener(new OnChartGestureListener() {
             @Override
             public void onChartGestureStart(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
@@ -192,7 +192,7 @@ public class SMFLineChart extends RelativeLayout {
         this.addView(mChart,new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT));
     }
 
-
+    // Set Position
     public void setPosition (SMFJSObject jsonObj) {
 
 
@@ -206,6 +206,7 @@ public class SMFLineChart extends RelativeLayout {
         Point size = new Point();
         WindowManager w = currentActivity.getWindowManager();
 
+        // Device screen size
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)    {
             w.getDefaultDisplay().getSize(size);
             Measuredwidth = size.x;
@@ -217,38 +218,20 @@ public class SMFLineChart extends RelativeLayout {
         }
 
 
+        // Position calculate
         try{
+
             String Left = jsonObj.getProperty("left").toString();
-            if(!Left.contains("%")){ // pixel
-                leftVal = Double.parseDouble(Left);
-            }else{
-                leftVal = Double.parseDouble(Left.replace("%",""))/100 ;
-                leftVal =  (int)(Measuredwidth*leftVal);
-            }
+            leftVal =  calculatePosition(Left, Measuredwidth);
 
             String Top = jsonObj.getProperty("top").toString();
-            if(!Top.contains("%")){ // pixel
-                topVal = Double.parseDouble(Top) ;
-            }else{
-                topVal = Double.parseDouble(Top.replace("%",""))/100 ;
-                topVal =  (int)(Measuredheight*topVal);
-            }
+            topVal =  calculatePosition(Top, Measuredheight);
 
             String Height = jsonObj.getProperty("height").toString();
-            if(!Height.contains("%")){ // pixel
-                heightVal = Double.parseDouble(Height) ;
-            }else{
-                heightVal = Double.parseDouble(Height.replace("%",""))/100 ;
-                heightVal =  (int)(Measuredheight*heightVal);
-            }
+            heightVal =  calculatePosition(Height, Measuredheight);
 
             String Width = jsonObj.getProperty("width").toString();
-            if(!Width.contains("%")){ // pixel
-                widthVal = Double.parseDouble(Width) ;
-            }else{
-                widthVal = Double.parseDouble(Width.replace("%",""))/100 ;
-                widthVal =  (int)(Measuredwidth*widthVal);
-            }
+            widthVal =  calculatePosition(Width, Measuredwidth);
 
         }catch (Exception e){
             onError("Please check your position values", ErrorCodes.POSITION_ERROR);
@@ -266,7 +249,18 @@ public class SMFLineChart extends RelativeLayout {
 
     }
 
+    private double calculatePosition(String number, int referanceNumber){
+        if(!number.contains("%")){ // pixel
+            return Double.parseDouble(number);
+        }else{
+            double val = Double.parseDouble(number.replace("%",""))/100 ;
+            val =  (int)(referanceNumber*val);
+            return val;
+        }
 
+    }
+
+    // Set Data
     public void setData(float[] dataX, float[] dataY){
 
         ArrayList<Entry> entries = new ArrayList<>();
@@ -296,6 +290,7 @@ public class SMFLineChart extends RelativeLayout {
             // Var value text font size
             dataset.setValueTextSize(selectedValueFontSize);
 
+            dataset.setDrawCircles(false);
 
             // Create data
             LineData data = new LineData(dataset);
@@ -353,6 +348,7 @@ public class SMFLineChart extends RelativeLayout {
 
     }
 
+    // Font size set
     public void setXAxisFontSize(float size){
         XAxis xAxis = mChart.getXAxis();
         xAxis.setTextSize(size);
@@ -376,6 +372,7 @@ public class SMFLineChart extends RelativeLayout {
 
     }
 
+    // Value color set
     public void setValueColor(String color){
 
         if(dataset!=null){
@@ -394,8 +391,7 @@ public class SMFLineChart extends RelativeLayout {
 
     }
 
-
-
+    // Range control
     private boolean isInRange(int num, int min, int max){
 
         if(num < min || num > max ){
@@ -406,6 +402,7 @@ public class SMFLineChart extends RelativeLayout {
 
     }
 
+    // onError callback
     private void onError(String errorMsg, int errorCode)
     {
         try {
@@ -425,6 +422,7 @@ public class SMFLineChart extends RelativeLayout {
         }
     }
 
+    // Smartface callback function
     private void sendToMessageSMF(String eventName, JSONObject obj){
 
         try {

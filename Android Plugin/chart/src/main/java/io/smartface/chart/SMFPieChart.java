@@ -187,6 +187,7 @@ public class SMFPieChart extends RelativeLayout {
         Point size = new Point();
         WindowManager w = currentActivity.getWindowManager();
 
+        // Device screen size
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)    {
             w.getDefaultDisplay().getSize(size);
             Measuredwidth = size.x;
@@ -198,38 +199,20 @@ public class SMFPieChart extends RelativeLayout {
         }
 
 
+        // Position calculate
         try{
+
             String Left = jsonObj.getProperty("left").toString();
-            if(!Left.contains("%")){ // pixel
-                leftVal = Double.parseDouble(Left);
-            }else{
-                leftVal = Double.parseDouble(Left.replace("%",""))/100 ;
-                leftVal =  (int)(Measuredwidth*leftVal);
-            }
+            leftVal =  calculatePosition(Left, Measuredwidth);
 
             String Top = jsonObj.getProperty("top").toString();
-            if(!Top.contains("%")){ // pixel
-                topVal = Double.parseDouble(Top) ;
-            }else{
-                topVal = Double.parseDouble(Top.replace("%",""))/100 ;
-                topVal =  (int)(Measuredheight*topVal);
-            }
+            topVal =  calculatePosition(Top, Measuredheight);
 
             String Height = jsonObj.getProperty("height").toString();
-            if(!Height.contains("%")){ // pixel
-                heightVal = Double.parseDouble(Height) ;
-            }else{
-                heightVal = Double.parseDouble(Height.replace("%",""))/100 ;
-                heightVal =  (int)(Measuredheight*heightVal);
-            }
+            heightVal =  calculatePosition(Height, Measuredheight);
 
             String Width = jsonObj.getProperty("width").toString();
-            if(!Width.contains("%")){ // pixel
-                widthVal = Double.parseDouble(Width) ;
-            }else{
-                widthVal = Double.parseDouble(Width.replace("%",""))/100 ;
-                widthVal =  (int)(Measuredwidth*widthVal);
-            }
+            widthVal =  calculatePosition(Width, Measuredwidth);
 
         }catch (Exception e){
             onError("Please check your position values", ErrorCodes.POSITION_ERROR);
@@ -247,6 +230,19 @@ public class SMFPieChart extends RelativeLayout {
 
     }
 
+
+    private double calculatePosition(String number, int referanceNumber){
+        if(!number.contains("%")){ // pixel
+            return Double.parseDouble(number);
+        }else{
+            double val = Double.parseDouble(number.replace("%",""))/100 ;
+            val =  (int)(referanceNumber*val);
+            return val;
+        }
+
+    }
+
+    // Set Data
     public void setData(float[] dataX, String[] labels){
 
         setDataWithColors(dataX,labels,null);
@@ -254,6 +250,7 @@ public class SMFPieChart extends RelativeLayout {
 
     }
 
+    // Set Data with colors
     public void setDataWithColors(float[] dataX, String[] labels , String[] colors){
 
 
@@ -295,12 +292,9 @@ public class SMFPieChart extends RelativeLayout {
             mChart.setEntryLabelTextSize(selectedValueFontSize);
 
 
-
             mChart.setData(datas);
             mChart.animateX(chartAnimationTime);
             mChart.invalidate();
-
-
 
 
             this.addView(mChart,new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT));
@@ -318,7 +312,7 @@ public class SMFPieChart extends RelativeLayout {
 
     }
 
-
+    // Get color by name
     private int getColor(String colorName){
 
         try{
@@ -331,8 +325,7 @@ public class SMFPieChart extends RelativeLayout {
 
     }
 
-
-
+    // Font size set
     public void setValueFontSize(float size){
 
         if(dataset != null){
@@ -345,6 +338,7 @@ public class SMFPieChart extends RelativeLayout {
 
     }
 
+    // Value color set
     public void setValueColor(String color){
 
         if(dataset!=null){
@@ -365,6 +359,7 @@ public class SMFPieChart extends RelativeLayout {
 
     }
 
+    // Chart rotation properties
     public void setRotationEnabled(boolean status){
         mChart.setRotationEnabled(status);
     }
@@ -388,6 +383,7 @@ public class SMFPieChart extends RelativeLayout {
         }
     }
 
+    // Smartface callback function
     private void sendToMessageSMF(String eventName, JSONObject obj){
 
         try {

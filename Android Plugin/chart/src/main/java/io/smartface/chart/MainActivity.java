@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         layout.addView(testBar);
 
 */
-
+/*
         //PIE TEST
         //////////////////////////////////
 
@@ -99,8 +99,8 @@ public class MainActivity extends AppCompatActivity {
 
         layout.addView(testPie);
 
-/*
-        //PIE TEST
+ */
+        //LINE TEST
         //////////////////////////////////
 
         testLine = new SMFLineChart(this);
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
         layout.addView(testLine);
 
-        */
+
 
     }
 

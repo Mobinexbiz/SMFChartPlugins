@@ -58,6 +58,7 @@ public class SMFBarChart extends RelativeLayout {
     boolean gastureSingleTap = false;
     int chartAnimationTime = 1400;
 
+    // Error Codes Class
     private class ErrorCodes {
         public static final int POSITION_ERROR = 1001;
         public static final int ARRAY_LENGTH_ERROR = 1002;
@@ -69,9 +70,10 @@ public class SMFBarChart extends RelativeLayout {
         super (activity);
         currentActivity = activity;
 
+        // Chart create
         mChart = new BarChart(activity);
 
-        // CHART Setting
+        // Chart Setting
         mChart.getDescription().setEnabled(false);
         mChart.getAxisRight().setEnabled(false);
         mChart.setDrawBarShadow(false);
@@ -80,19 +82,17 @@ public class SMFBarChart extends RelativeLayout {
         mChart.setPinchZoom(true);
         mChart.setDrawGridBackground(false);
         mChart.animateY(chartAnimationTime);
-
-
         Legend l = mChart.getLegend();
         l.setEnabled(false);
 
 
+        // CHart xAxis position set
         XAxis xAxis = mChart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setDrawGridLines(false);
 
 
-
-
+        // Chart xAxis value formatter
         xAxis.setValueFormatter(new IAxisValueFormatter() {
             @Override
             public String getFormattedValue(float value, AxisBase axis) {
@@ -105,6 +105,7 @@ public class SMFBarChart extends RelativeLayout {
             }
         });
 
+
         mChart.fitScreen();
 
 
@@ -115,8 +116,10 @@ public class SMFBarChart extends RelativeLayout {
                 if(gastureSingleTap){
 
                     gastureSingleTap = false;
+                    // Data index find
                     int index = findIndex(e.getX(), e.getY());
 
+                    // Smartface callback
                     try {
 
                         JSONObject obj = new JSONObject();
@@ -144,6 +147,7 @@ public class SMFBarChart extends RelativeLayout {
 
 
 
+        //Chart gasture listener
         mChart.setOnChartGestureListener(new OnChartGestureListener() {
             @Override
             public void onChartGestureStart(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
@@ -190,6 +194,7 @@ public class SMFBarChart extends RelativeLayout {
     }
 
 
+    // Set Position
     public void setPosition (SMFJSObject jsonObj) {
 
 
@@ -203,6 +208,7 @@ public class SMFBarChart extends RelativeLayout {
         Point size = new Point();
         WindowManager w = currentActivity.getWindowManager();
 
+        // Device screen size
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)    {
             w.getDefaultDisplay().getSize(size);
             Measuredwidth = size.x;
@@ -214,38 +220,20 @@ public class SMFBarChart extends RelativeLayout {
         }
 
 
+        // Position calculate
         try{
+
             String Left = jsonObj.getProperty("left").toString();
-            if(!Left.contains("%")){ // pixel
-                leftVal = Double.parseDouble(Left);
-            }else{
-                leftVal = Double.parseDouble(Left.replace("%",""))/100 ;
-                leftVal =  (int)(Measuredwidth*leftVal);
-            }
+            leftVal =  calculatePosition(Left, Measuredwidth);
 
             String Top = jsonObj.getProperty("top").toString();
-            if(!Top.contains("%")){ // pixel
-                topVal = Double.parseDouble(Top) ;
-            }else{
-                topVal = Double.parseDouble(Top.replace("%",""))/100 ;
-                topVal =  (int)(Measuredheight*topVal);
-            }
+            topVal =  calculatePosition(Top, Measuredheight);
 
             String Height = jsonObj.getProperty("height").toString();
-            if(!Height.contains("%")){ // pixel
-                heightVal = Double.parseDouble(Height) ;
-            }else{
-                heightVal = Double.parseDouble(Height.replace("%",""))/100 ;
-                heightVal =  (int)(Measuredheight*heightVal);
-            }
+            heightVal =  calculatePosition(Height, Measuredheight);
 
             String Width = jsonObj.getProperty("width").toString();
-            if(!Width.contains("%")){ // pixel
-                widthVal = Double.parseDouble(Width) ;
-            }else{
-                widthVal = Double.parseDouble(Width.replace("%",""))/100 ;
-                widthVal =  (int)(Measuredwidth*widthVal);
-            }
+            widthVal =  calculatePosition(Width, Measuredwidth);
 
         }catch (Exception e){
             onError("Please check your position values", ErrorCodes.POSITION_ERROR);
@@ -263,7 +251,18 @@ public class SMFBarChart extends RelativeLayout {
 
     }
 
+    private double calculatePosition(String number, int referanceNumber){
+        if(!number.contains("%")){ // pixel
+            return Double.parseDouble(number);
+        }else{
+            double val = Double.parseDouble(number.replace("%",""))/100 ;
+            val =  (int)(referanceNumber*val);
+            return val;
+        }
 
+    }
+
+    // Set Data
     public void setData(float[] dataX, float[] dataY){
 
         ArrayList<BarEntry> entries = new ArrayList<>();
@@ -319,6 +318,7 @@ public class SMFBarChart extends RelativeLayout {
                 dataset.setColor(Color.parseColor(colorName));
                 mChart.invalidate();
             }catch (Exception e ){
+                // Default Color
                 dataset.setColor(Color.BLUE);
                 mChart.invalidate();
             }
@@ -353,6 +353,8 @@ public class SMFBarChart extends RelativeLayout {
 
     }
 
+
+    // Font size set
     public void setXAxisFontSize(float size){
         XAxis xAxis = mChart.getXAxis();
         xAxis.setTextSize(size);
@@ -376,6 +378,7 @@ public class SMFBarChart extends RelativeLayout {
 
     }
 
+    // Value color set
     public void setValueColor(String color){
 
         if(dataset!=null){
@@ -394,8 +397,7 @@ public class SMFBarChart extends RelativeLayout {
 
     }
 
-
-
+    // Range control
     private boolean isInRange(int num, int min, int max){
 
         if(num < min || num > max ){
@@ -406,6 +408,7 @@ public class SMFBarChart extends RelativeLayout {
 
     }
 
+    // onError callback
     private void onError(String errorMsg, int errorCode)
     {
         try {
@@ -425,6 +428,7 @@ public class SMFBarChart extends RelativeLayout {
         }
     }
 
+    // Smartface callback function
     private void sendToMessageSMF(String eventName, JSONObject obj){
 
         try {
@@ -444,7 +448,7 @@ public class SMFBarChart extends RelativeLayout {
     }
 
 
-
+    // find date index
     private int findIndex(float x, float y){
 
         for(int i = 0 ; i < DataX.length ; i++){

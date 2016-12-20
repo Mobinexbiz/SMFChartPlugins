@@ -1,2 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/com.android.support-appcompat-v7-23.4.0_af40fe434db4e157449480d6bb0958fcc13813c1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/com.android.support-support-vector-drawable-23.4.0_daa57b74a7463ff797669f04591fd5bad4bea1bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/com.android.support-design-23.4.0_590e659765cbe5a71fee7c411fb0345f49cc3a5e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/com.google.android.gms-play-services-base-8.1.0_c98c515c12c18074030a6047c687263d33b7b16d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/com.android.support-recyclerview-v7-23.4.0_c8755991aa125d1cbb022fff9c388bfd01187376.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v3.0.0/ff93baa2e2e6ca507fc6ec731f61751dd0d865e7/MPAndroidChart-v3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ff93baa2e2e6ca507fc6ec731f61751dd0d865e7">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/MPAndroidChart-v3.0.0_80edcc991c29de8652b746f7ff8d6cdf52926676.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/com.android.support-animated-vector-drawable-23.4.0_e9c9e8746b3805ee46383aa6dfd2f8887d7c6f3d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/com.google.android.gms-play-services-basement-8.1.0_6c2802f0595a121c189c4f7a76627ac06ea17402.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/support-annotations-23.4.0_58ea5bff41aea7d3244c4aa70d5be0ba1acb59eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/internal_impl-23.4.0_9ddaaab3ac00659e2e869b15ed22e36fa876d47d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="17449c47df35c754b257532052f1270c444f7993">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/com.google.android.gms-play-services-vision-8.1.0_e4d1a0f3064cb208faeeb4ef42b72aa11819c670.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/metehansemiz/Documents/BitBucket/SmartfaceChartPlugin/Android Plugin/chart/build/intermediates/pre-dexed/dev/debug/com.android.support-support-v4-23.4.0_73d66bddb4a5cac3612f9530792899ba083f5d01.jar" />
+    </item>
+
+</items>
