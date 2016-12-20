@@ -253,8 +253,12 @@ pieChart.setRotationEnabled(false);
 - [Download Smartface On-Device Emulator](https://smf.to/app) (Works only from your device)
 
 ### Contact Information
+
 - Project Owner : Smartface Inc
 - Project Website : [smartface.io](https://smartface.io)
+
+- Author iOS plugin : [doganekici](https://github.com/doganekici)
+- Author Android plugin : [metehansemiz](https://github.com/msmete)
 
 ### Code of Conduct 
 "We, as the community behind this project, are committed to making participation in this project a harassment-free experience for everyone, regardless of the level of expertise, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion or nationality."
@@ -266,5 +270,5 @@ Smartface Chart Plugins is licensed under the Apache License, Version 2.0. See t
 Read the [CHANGELOG.md](https://github.com/Mobinexbiz/SMFChartPlugins/blob/master/CHANGELOG.md) file.
 
 ### Thanks
-danielgindi/Charts [danielgindi/Charts](https://github.com/danielgindi/Charts)
-PhilJay/MPAndroidChart [PhilJay/MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
+- danielgindi/Charts [danielgindi/Charts](https://github.com/danielgindi/Charts)
+- PhilJay/MPAndroidChart [PhilJay/MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
