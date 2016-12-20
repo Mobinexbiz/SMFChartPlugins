@@ -31,7 +31,6 @@ To start using Chart plugin you need to follow below steps:
 ### BAR CHART & LINE CHART
 
 #### Create New Bar Chart View 
-Parameters	:  
 
 ``` Javascript
 var barChart = new SMFBarChart("Landroid/app/Activity;");
